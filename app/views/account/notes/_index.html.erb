@@ -14,6 +14,7 @@
       <% box.title t(".contexts.#{context.class.name.underscore}.header") %>
       <% box.description do %>
         <%= t(".contexts.#{context.class.name.underscore}.description#{"_empty" unless notes.any?}") %>
+        <%= render 'shared/search', collection: notes, pagy: pagy, context: context %>
         <%= render "shared/limits/index", model: notes.model %>
       <% end %>
 
