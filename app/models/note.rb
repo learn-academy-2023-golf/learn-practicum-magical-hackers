@@ -4,10 +4,6 @@ class Note < ApplicationRecord
     :against => :title,
     using: { tsearch: { prefix: true } }
 
-  def self.ransackable_attributes(auth_object = nil)
-    %w[title]
-  end
-
   # 🚅 add concerns above.
 
   # 🚅 add attribute accessors above.
