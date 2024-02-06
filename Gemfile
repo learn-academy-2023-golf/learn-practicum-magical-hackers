@@ -208,5 +208,4 @@ gem "pry"
 # YOUR GEMS
 # You can add any Ruby gems you need below. By keeping them separate from our gems above, you'll avoid the likelihood that you run into a merge conflict in the future.
 
-
 # 🚅 super scaffolding will insert new oauth providers above this line.
