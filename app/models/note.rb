@@ -1,4 +1,13 @@
 class Note < ApplicationRecord
+  include PgSearch::Model
+  pg_search_scope :search_by_title,
+    :against => :title,
+    using: { tsearch: { prefix: true } }
+
+  def self.ransackable_attributes(auth_object = nil)
+    %w[title]
+  end
+
   # 🚅 add concerns above.
 
   # 🚅 add attribute accessors above.

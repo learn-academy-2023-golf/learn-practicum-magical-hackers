@@ -459,6 +459,9 @@ GEM
       ast (~> 2.4.1)
       racc
     pg (1.5.4)
+    pg_search (2.3.6)
+      activerecord (>= 5.2)
+      activesupport (>= 5.2)
     phonelib (0.8.7)
     possessive (1.0.1)
     postmark (1.25.0)
@@ -545,6 +548,10 @@ GEM
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
     rake (13.1.0)
+    ransack (4.1.1)
+      activerecord (>= 6.1.5)
+      activesupport (>= 6.1.5)
+      i18n
     rdoc (6.6.2)
       psych (>= 4.0.0)
     redis (5.0.8)
@@ -692,6 +699,7 @@ GEM
     websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    will_paginate (4.0.0)
     xpath (3.2.0)
       nokogiri (~> 1.8)
     xxhash (0.5.0)
@@ -746,6 +754,7 @@ DEPENDENCIES
   minitest-reporters
   minitest-retry
   pg (>= 0.18, < 2.0)
+  pg_search
   postmark-rails
   pry
   puma (~> 6.0)
@@ -754,6 +763,7 @@ DEPENDENCIES
   rails-erd
   rails_autoscale_agent
   rails_best_practices
+  ransack
   redis (~> 5.0.5)
   rqrcode
   ruby-vips
@@ -769,6 +779,7 @@ DEPENDENCIES
   turbo-rails
   tzinfo-data
   web-console
+  will_paginate (~> 4.0)
 
 RUBY VERSION
    ruby 3.3.0

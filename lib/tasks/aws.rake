@@ -36,5 +36,9 @@ namespace :aws do
     )
 
     puts "CORS configuration set successfully for bucket '#{s3_config[:bucket]}'"
+
+    # PG_Search
+    load “pg_search/tasks.rb”
   end
+
 end
