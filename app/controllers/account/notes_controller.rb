@@ -4,10 +4,10 @@ class Account::NotesController < Account::ApplicationController
   # GET /account/teams/:team_id/notes
   # GET /account/teams/:team_id/notes.json
   def index
-    if params[:query].present?
-      @notes = Note.search_by_title(params[:query])
+    @notes = if params[:query].present?
+      Note.search_by_title(params[:query])
     else
-      @notes = Note.all
+      Note.all
     end
     delegate_json_to_api
   end
@@ -73,5 +73,4 @@ class Account::NotesController < Account::ApplicationController
   def process_params(strong_params)
     # 🚅 super scaffolding will insert processing for new fields above this line.
   end
-
 end
